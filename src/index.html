@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bKash Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="mockup-phone">
+    <div class="mockup-phone-camera"></div>
+    <div class="mockup-phone-display bg-gray-50 grid place-content-center">
+
+      <!-- Login Section -->
+      <div id="firstDisplay" class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xs">
+        <div class="flex justify-center mb-4">
+          <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg" alt="bKash Logo" class="h-10" />
+        </div>
+        <h2 class="text-center text-xl font-semibold text-pink-600 mb-6">Login to bKash</h2>
+
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+          <input id="phone" type="text" placeholder="01XXXXXXXXX"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <div class="mb-4">
+          <label for="pin" class="block text-sm font-medium text-gray-700">Enter Your PIN</label>
+          <input id="pin" type="password" placeholder="Enter 4-digit PIN"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <button id="loginBtn"
+          class="w-full py-2 rounded-lg bg-pink-600 text-white font-medium hover:bg-pink-700 transition">Login</button>
+
+        <div id="loginError" class="text-red-500 text-sm mt-2 hidden">Error! Wrong Information.</div>
+      </div>
+
+      <!-- Dashboard Section -->
+      <div id="scndDsply" class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xs hidden">
+        <div class="flex flex-col items-center mb-6">
+          <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg" alt="bKash Logo" class="h-10 mb-2" />
+          <h2 class="text-xl font-semibold text-pink-600">Your Balance : <span id="balance">500</span></h2>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <button id="cashIn"
+            class="w-full py-3 rounded-lg bg-pink-600 text-white font-medium text-lg hover:bg-pink-700 transition-all duration-300 shadow-md">Cash In</button>
+          <button id="cashOut"
+            class="w-full py-3 rounded-lg bg-pink-600 text-white font-medium text-lg hover:bg-pink-700 transition-all duration-300 shadow-md">Cash Out</button>
+        </div>
+      </div>
+
+      <!-- Cash In Section -->
+      <div id="cashInSection" class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xs hidden">
+        <div class="flex justify-center mb-4">
+          <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg" alt="bKash Logo" class="h-10" />
+        </div>
+        <h2 class="text-center text-xl font-semibold text-pink-600 mb-2">Cash In</h2>
+        <h2 class="text-xl font-semibold text-pink-600 justify-center mb-1.5 flex">Your Balance : <span id="balance2">500</span></h2>
+
+        <div class="mb-4">
+          <label for="cashInAmount" class="block text-sm font-medium text-gray-700">Enter Amount</label>
+          <input id="cashInAmount" type="text" placeholder="Enter Amount"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <div class="mb-4">
+          <label for="cashInPin" class="block text-sm font-medium text-gray-700">Enter Your PIN</label>
+          <input id="cashInPin" type="password" placeholder="Enter 4-digit PIN"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <button id="cashInBtn"
+          class="w-full py-2 rounded-lg bg-pink-600 text-white font-medium hover:bg-pink-700 transition">Submit</button>
+
+        <div id="cashInError" class="text-red-500 text-sm mt-2 hidden">Error! Wrong PIN or invalid amount.</div>
+      </div>
+
+      <!-- Cash Out Section -->
+      <div id="cashOutSection" class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xs hidden">
+        <div class="flex justify-center mb-4">
+          <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg" alt="bKash Logo" class="h-10" />
+        </div>
+        <h2 class="text-center text-xl font-semibold text-pink-600 mb-2">Cash Out</h2>
+        <h2 class="text-xl font-semibold text-pink-600 justify-center mb-1.5 flex">Your Balance : <span id="balance3">500</span></h2>
+
+        <div class="mb-4">
+          <label for="cashOutAmount" class="block text-sm font-medium text-gray-700">Enter Amount</label>
+          <input id="cashOutAmount" type="text" placeholder="Enter Amount"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <div class="mb-4">
+          <label for="cashOutPin" class="block text-sm font-medium text-gray-700">Enter Your PIN</label>
+          <input id="cashOutPin" type="password" placeholder="Enter 4-digit PIN"
+            class="w-full mt-1 text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" />
+        </div>
+
+        <button id="cashOutBtn"
+          class="w-full py-2 rounded-lg bg-pink-600 text-white font-medium hover:bg-pink-700 transition">Submit</button>
+
+        <div id="cashOutError" class="text-red-500 text-sm mt-2 hidden">Error! Wrong PIN or invalid amount.</div>
+      </div>
+
+    </div>
+  </div>
+        <script src="demo.js"></script>
+</body>
+
+</html>
